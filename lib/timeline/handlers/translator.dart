@@ -1,4 +1,4 @@
-import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../dictionaries/dictionary.dart';
 import '../model/headers_options.dart';
@@ -39,18 +39,23 @@ class Translator {
       TimelineCalendar.calendarProvider.getMonthDaysShort(monthIndex);
 
   static List<String> getShortNameOfDays() =>
-      shortDayNames[TimelineCalendar.calendarLanguage][TimelineCalendar.calendarType];
+      shortDayNames[TimelineCalendar.calendarLanguage]
+          [TimelineCalendar.calendarType];
 
   static List<String> getFullNameOfDays() =>
-      fullDayNames[TimelineCalendar.calendarLanguage][TimelineCalendar.calendarType];
+      fullDayNames[TimelineCalendar.calendarLanguage]
+          [TimelineCalendar.calendarType];
 
   static List<String> getFullMonthNames() =>
-      fullMonthNames[TimelineCalendar.calendarLanguage][TimelineCalendar.calendarType];
+      fullMonthNames[TimelineCalendar.calendarLanguage]
+          [TimelineCalendar.calendarType];
 
   static List<String> getShortMonthNames() =>
-      shortMonthNames[TimelineCalendar.calendarLanguage][TimelineCalendar.calendarType];
+      shortMonthNames[TimelineCalendar.calendarLanguage]
+          [TimelineCalendar.calendarType];
 
   static bool isRTL() => directionIsRTL[TimelineCalendar.calendarLanguage];
 
-  static bool isCenter() => directionIsCenter[TimelineCalendar.calendarLanguage];
+  static bool isCenter() =>
+      directionIsCenter[TimelineCalendar.calendarLanguage];
 }

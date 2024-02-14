@@ -1,5 +1,4 @@
-
-import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../model/headers_options.dart';
 import '../utils/calendar_types.dart';
@@ -18,20 +17,26 @@ class CalendarMonthlyUtils extends CalendarUtils {
     return month;
   }
 
-  static int getFirstDayOfMonth(List<String> dayNames, HeaderOptions headersStyle) {
+  static int getFirstDayOfMonth(
+      List<String> dayNames, HeaderOptions headersStyle) {
     final currentMonth = CalendarUtils.getPartByInt(format: PartFormat.MONTH);
-    final monthDays = CalendarUtils.getMonthDays(headersStyle.weekDayStringType, currentMonth);
+    final monthDays = CalendarUtils.getMonthDays(
+        headersStyle.weekDayStringType, currentMonth);
     return dayNames.indexOf(monthDays[1]);
   }
 
-  static String getDayNameOfMonth(HeaderOptions headersStyle, int currMonth, int index) {
-    final dayName = TimelineCalendar.calendarProvider.getMonthDays(headersStyle.weekDayStringType, currMonth)[index];
+  static String getDayNameOfMonth(
+      HeaderOptions headersStyle, int currMonth, int index) {
+    final dayName = TimelineCalendar.calendarProvider
+        .getMonthDays(headersStyle.weekDayStringType, currMonth)[index];
     return dayName;
   }
 
   static int getLastDayOfMonth(HeaderOptions headersStyle) {
     final currentMonth = CalendarUtils.getPartByInt(format: PartFormat.MONTH);
-    return CalendarUtils.getDays(headersStyle.weekDayStringType, currentMonth).keys.last;
+    return CalendarUtils.getDays(headersStyle.weekDayStringType, currentMonth)
+        .keys
+        .last;
   }
 
   static int getLastMonthLastDay(HeaderOptions headersStyle) {
@@ -39,6 +44,8 @@ class CalendarMonthlyUtils extends CalendarUtils {
     if (cMonth - 1 < 1) {
       return -1;
     }
-    return CalendarUtils.getDays(headersStyle.weekDayStringType, cMonth - 1).keys.last;
+    return CalendarUtils.getDays(headersStyle.weekDayStringType, cMonth - 1)
+        .keys
+        .last;
   }
 }

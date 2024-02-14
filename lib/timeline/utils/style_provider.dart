@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../model/datetime.dart';
 import 'calendar_utils.dart';
 
 class StyleProvider {
-  static BoxDecoration? getSpecialDayDecoration(CalendarDateTime? specialDay, curYear, int currMonth, day) {
+  static BoxDecoration? getSpecialDayDecoration(
+      CalendarDateTime? specialDay, curYear, int currMonth, day) {
     BoxDecoration? decoration;
-    final isStartRange = CalendarUtils.isStartOfRange(specialDay, curYear, currMonth, day);
-    final isEndRange = CalendarUtils.isEndOfRange(specialDay, curYear, currMonth, day);
-    final isInRange = CalendarUtils.isInRange(specialDay, curYear, currMonth, day);
+    final isStartRange =
+        CalendarUtils.isStartOfRange(specialDay, curYear, currMonth, day);
+    final isEndRange =
+        CalendarUtils.isEndOfRange(specialDay, curYear, currMonth, day);
+    final isInRange =
+        CalendarUtils.isInRange(specialDay, curYear, currMonth, day);
 
     if (isEndRange && isStartRange) {
-      decoration = BoxDecoration(color: specialDay?.color, borderRadius: BorderRadius.circular(8));
+      decoration = BoxDecoration(
+          color: specialDay?.color, borderRadius: BorderRadius.circular(8));
     } else if (isStartRange) {
       decoration = BoxDecoration(
         color: specialDay?.color,

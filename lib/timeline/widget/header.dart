@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/select_month.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/select_year.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/select_month.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/select_year.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../model/calendar_options.dart';
 import '../model/day_options.dart';

@@ -1,5 +1,4 @@
-
-import 'package:flutter_timeline_calendar/timeline/utils/calendar_types.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/utils/calendar_types.dart';
 import '../model/datetime.dart';
 
 abstract class CalendarProvider {

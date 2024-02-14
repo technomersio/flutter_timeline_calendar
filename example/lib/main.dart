@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_timeline_calendar/timeline/model/calendar_options.dart';
-import 'package:flutter_timeline_calendar/timeline/model/datetime.dart';
-import 'package:flutter_timeline_calendar/timeline/model/day_options.dart';
-import 'package:flutter_timeline_calendar/timeline/model/headers_options.dart';
-import 'package:flutter_timeline_calendar/timeline/provider/instance_provider.dart';
-import 'package:flutter_timeline_calendar/timeline/utils/calendar_types.dart';
-import 'package:flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
-import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/model/calendar_options.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/model/datetime.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/model/day_options.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/model/headers_options.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/provider/instance_provider.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/utils/calendar_types.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
+import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 void main() {
   runApp(const MyApp());
