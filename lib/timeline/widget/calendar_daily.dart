@@ -33,7 +33,7 @@ class CalendarDaily extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(left: 15, right: 15),
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(6.0)),
+          color: Colors.transparent, borderRadius: BorderRadius.circular(6.0)),
       height: DayOptions.of(context).showWeekDay
           ? DayOptions.of(context).compactMode
               ? 90
@@ -57,12 +57,6 @@ class CalendarDaily extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6.0),
-                        gradient: const LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [Color(0xffffffff), Color(0x0affffff)],
-                          tileMode: TileMode.clamp,
-                        ),
                       ),
                     ),
                   ),
@@ -76,12 +70,6 @@ class CalendarDaily extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6.0),
-                        gradient: const LinearGradient(
-                          begin: Alignment.centerRight,
-                          end: Alignment.centerLeft,
-                          colors: [Color(0xffffffff), Color(0x0affffff)],
-                          tileMode: TileMode.clamp,
-                        ),
                       ),
                     ),
                   ),
