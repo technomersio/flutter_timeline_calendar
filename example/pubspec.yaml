@@ -29,7 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  flutter_timeline_calendar:
+  tio_flutter_timeline_calendar:
     path: ../
 
   flutter:
