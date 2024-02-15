@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/model/datetime.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/provider/calendar_provider.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/provider/instance_provider.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/utils/calendar_types.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/utils/calendar_utils.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/widget/calendar_daily.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/widget/calendar_monthly.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/widget/header.dart';
+import 'package:flutter_timeline_calendar/timeline/model/datetime.dart';
+import 'package:flutter_timeline_calendar/timeline/provider/calendar_provider.dart';
+import 'package:flutter_timeline_calendar/timeline/provider/instance_provider.dart';
+import 'package:flutter_timeline_calendar/timeline/utils/calendar_types.dart';
+import 'package:flutter_timeline_calendar/timeline/utils/calendar_utils.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/calendar_daily.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/calendar_monthly.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/header.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../model/calendar_options.dart';

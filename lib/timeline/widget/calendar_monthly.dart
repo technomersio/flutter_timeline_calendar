@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../handlers/calendar_monthly_utils.dart';
 import '../handlers/translator.dart';

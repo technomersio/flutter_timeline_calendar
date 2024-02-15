@@ -1,4 +1,4 @@
-import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../handlers/translator.dart';
 import '../model/datetime.dart';

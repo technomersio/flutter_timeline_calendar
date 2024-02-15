@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/flutter_timeline_calendar.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
+import 'package:flutter_timeline_calendar/timeline/flutter_timeline_calendar.dart';
+import 'package:flutter_timeline_calendar/timeline/utils/datetime_extension.dart';
 
 import '../utils/calendar_utils.dart';
 import 'day.dart';

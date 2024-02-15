@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tio_flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
+import 'package:flutter_timeline_calendar/timeline/widget/timeline_calendar.dart';
 
 import '../model/datetime.dart';
 import 'calendar_utils.dart';
