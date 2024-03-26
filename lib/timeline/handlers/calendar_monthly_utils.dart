@@ -11,9 +11,9 @@ class CalendarMonthlyUtils extends CalendarUtils {
   }
 
   static getMonth(int month) {
-    if (month > 12)
+    if (month > 12) {
       return 1;
-    else if (month < 1) return 1;
+    } else if (month < 1){ return 1;}
     return month;
   }
 

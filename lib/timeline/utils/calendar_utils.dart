@@ -85,10 +85,12 @@ class CalendarUtils {
   static isInRange(
       CalendarDateTime? selectedDatetime, int year, int month, int day) {
     if (selectedDatetime?.year != year) return false;
-    if (selectedDatetime?.month != null && selectedDatetime!.month > month)
+    if (selectedDatetime?.month != null && selectedDatetime!.month > month) {
       return false;
-    if (selectedDatetime?.toMonth != null && selectedDatetime!.toMonth! < month)
+    }
+    if (selectedDatetime?.toMonth != null && selectedDatetime!.toMonth! < month) {
       return false;
+    }
     if (selectedDatetime?.day != null &&
         selectedDatetime!.month == month &&
         selectedDatetime.day > day) return false;
@@ -99,8 +101,9 @@ class CalendarUtils {
           selectedDatetime.toDay! < day) return false;
     } else {
       if (selectedDatetime!.toDay != null &&
-          (selectedDatetime.month != month || selectedDatetime.toDay! < day))
+          (selectedDatetime.month != month || selectedDatetime.toDay! < day)) {
         return false;
+      }
     }
     return true;
   }

@@ -38,13 +38,13 @@ class StyleProvider {
 
   static _getStartRadiusByLocale() {
     return _isRTL()
-        ? BorderRadius.horizontal(right: Radius.circular(8))
-        : BorderRadius.horizontal(left: Radius.circular(8));
+        ? const BorderRadius.horizontal(right: Radius.circular(8))
+        : const BorderRadius.horizontal(left: Radius.circular(8));
   }
 
   static _getEndRadiusByLocale() {
     return _isRTL()
-        ? BorderRadius.horizontal(left: Radius.circular(8))
-        : BorderRadius.horizontal(right: Radius.circular(8));
+        ? const BorderRadius.horizontal(left: Radius.circular(8))
+        : const BorderRadius.horizontal(right: Radius.circular(8));
   }
 }

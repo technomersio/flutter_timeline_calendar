@@ -11,7 +11,7 @@ class CalendarDaily extends StatelessWidget {
   late ScrollController animatedTo;
   DateTime? weekStartDate;
   DateTime? weekEndDate;
-  CalendarDaily({this.onCalendarChanged}) : super() {
+  CalendarDaily({super.key, this.onCalendarChanged}){
     dayIndex = CalendarUtils.getPartByInt(format: PartFormat.DAY);
   }
 

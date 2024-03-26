@@ -11,9 +11,9 @@ class SelectYear extends StatelessWidget {
 
   YearOptions? yearStyle;
 
-  SelectYear({required this.onHeaderChanged, this.yearStyle});
+  SelectYear({super.key, required this.onHeaderChanged, this.yearStyle});
 
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
 
   late VoidCallback scrollToPositionCallback;
 
@@ -45,7 +45,7 @@ class SelectYear extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
-              '${Translator.getTranslation('year_selector')}',
+              Translator.getTranslation('year_selector'),
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w500,
@@ -82,7 +82,7 @@ class SelectYear extends StatelessWidget {
       }),
       child: Center(
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           decoration: year == selectedYear ? selectedDecoration : null,
           child: Text(
             '$year',
@@ -105,9 +105,10 @@ class SelectYear extends StatelessWidget {
 
   void animateToCurrentYear() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      if (_scrollController.hasClients)
+      if (_scrollController.hasClients) {
         _scrollController.animateTo(findSelectedYearOffset(),
-            duration: Duration(milliseconds: 500), curve: Curves.ease);
+            duration: const Duration(milliseconds: 500), curve: Curves.ease);
+      }
     });
   }
 }

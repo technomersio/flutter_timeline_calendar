@@ -88,7 +88,9 @@ class GregorianCalendar extends CalendarProvider {
   List<int> getYears() {
     int year = _getSelectedDate().year;
     List<int> years = [];
-    for (var i = -100; i <= 50; i++) years.add(year + i);
+    for (var i = -100; i <= 50; i++) {
+      years.add(year + i);
+    }
     return years;
   }
 
@@ -98,7 +100,9 @@ class GregorianCalendar extends CalendarProvider {
     int daysinCurrentMonth =
         getMonthDays(WeekDayStringTypes.FULL, month).length;
     List<int> days = [];
-    for (var i = 1; i <= daysinCurrentMonth; i++) days.add(i);
+    for (var i = 1; i <= daysinCurrentMonth; i++) {
+      days.add(i);
+    }
     return days;
   }
 
