@@ -12,9 +12,9 @@ class SelectDay extends StatelessWidget {
 
   DayOptions? dayStyle;
 
-  SelectDay({required this.onHeaderChanged, this.dayStyle});
+  SelectDay({super.key, required this.onHeaderChanged, this.dayStyle});
 
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
 
   late VoidCallback scrollToPositionCallback;
 
@@ -34,26 +34,26 @@ class SelectDay extends StatelessWidget {
     );
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(26), topRight: Radius.circular(26)),
         color: Colors.white,
       ),
       height: 380,
       child: Padding(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
-              '${Translator.getTranslation('day_selector')}',
-              style: TextStyle(
+              Translator.getTranslation('day_selector'),
+              style: const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w500,
                 //  fontFamily:dayStyle?.font,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
@@ -62,7 +62,7 @@ class SelectDay extends StatelessWidget {
                 child: GridView.builder(
                     controller: _scrollController,
                     itemCount: days.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3, mainAxisExtent: 50),
                     itemBuilder: (context, index) =>
                         dayWidgetMaker(days[index], context)),
@@ -82,7 +82,7 @@ class SelectDay extends StatelessWidget {
       }),
       child: Center(
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           decoration: day == selectedDay ? selectedDecoration : null,
           child: Text(
             '$day',
@@ -104,9 +104,10 @@ class SelectDay extends StatelessWidget {
 
   void animateToCurrentDay() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      if (_scrollController.hasClients)
+      if (_scrollController.hasClients) {
         _scrollController.animateTo(findSelectedDayOffset(),
-            duration: Duration(milliseconds: 500), curve: Curves.ease);
+            duration: const Duration(milliseconds: 500), curve: Curves.ease);
+      }
     });
   }
 }

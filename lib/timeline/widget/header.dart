@@ -20,7 +20,7 @@ class Header extends StatelessWidget {
   Function(int selectedMonth) onMonthChanged;
 
   Header(
-      {required this.onViewTypeChanged,
+      {super.key, required this.onViewTypeChanged,
       required this.onYearChanged,
       required this.onMonthChanged,
       required this.onDateTimeReset});
@@ -147,7 +147,7 @@ class Header extends StatelessWidget {
                   !isInTodayIndex() ? buildRefreshView(context) : Container(),
                   buildSelectViewType(context),
                   InkWell(
-                    customBorder: CircleBorder(),
+                    customBorder: const CircleBorder(),
                     onTap: () {
                       CalendarUtils.goToDay(1);
                       CalendarUtils.nextMonth();
@@ -155,7 +155,7 @@ class Header extends StatelessWidget {
                           CalendarUtils.getPartByInt(format: PartFormat.MONTH));
                     },
                     child: Padding(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Icon(
                         Icons.arrow_forward_ios,
                         size: 18,
@@ -182,7 +182,7 @@ class Header extends StatelessWidget {
       duration: const Duration(milliseconds: 300),
       opacity: !isInTodayIndex() ? 1 : 0,
       child: InkWell(
-        customBorder: CircleBorder(),
+        customBorder: const CircleBorder(),
         onTap: () {
           TimelineCalendar.dateTime =
               TimelineCalendar.calendarProvider.getDateTime();

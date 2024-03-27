@@ -14,7 +14,7 @@ import 'day.dart';
 class CalendarMonthly extends StatefulWidget {
   Function onCalendarChanged;
 
-  CalendarMonthly({required this.onCalendarChanged, Key? key}) : super();
+  CalendarMonthly({super.key, required this.onCalendarChanged});
 
   @override
   State<CalendarMonthly> createState() => _CalendarMonthlyState();
@@ -65,7 +65,7 @@ class _CalendarMonthlyState extends State<CalendarMonthly> {
           if (dayOptions.showWeekDay) ...[
             _buildDayName(),
           ],
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           _buildMonthView()
@@ -97,7 +97,7 @@ class _CalendarMonthlyState extends State<CalendarMonthly> {
                     color: dayNames[index] == dayName
                         ? DayOptions.of(context).selectedBackgroundColor
                         : null,
-                    fontSize: dayOptions?.dayFontSize,
+                    fontSize: dayOptions.dayFontSize,
                     fontFamily: CalendarOptions.of(context).font),
               ),
             ),
@@ -125,9 +125,9 @@ class _CalendarMonthlyState extends State<CalendarMonthly> {
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: 42,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 7, mainAxisExtent: 40, mainAxisSpacing: 5),
             itemBuilder: (context, index) => _buildItem(
                 index, firstDayIndex, lastDayIndex, lastMonthLastDay)),
@@ -142,12 +142,13 @@ class _CalendarMonthlyState extends State<CalendarMonthly> {
     final isCurrentMonthDays = index >= firstDayIndex && index < lastDayIndex;
     final isNextMonthDays = index >= lastDayIndex;
 
-    if (isCurrentMonthDays)
+    if (isCurrentMonthDays) {
       day = index - firstDayIndex + 1;
-    else if (isNextMonthDays)
+    } else if (isNextMonthDays){
       day = index - lastDayIndex + 1;
-    else
+    } else {
       day = lastMonthLastDay - (firstDayIndex - index) + 1;
+    }
 
     if (isCurrentMonthDays) {
       return buildCurrentMonthDay(day);
@@ -156,7 +157,7 @@ class _CalendarMonthlyState extends State<CalendarMonthly> {
     } else if (day > 0) {
       return buildPrevMonthDay(day);
     }
-    return SizedBox();
+    return const SizedBox();
   }
 
   buildCurrentMonthDay(day) {

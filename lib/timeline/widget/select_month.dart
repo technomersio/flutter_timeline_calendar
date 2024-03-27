@@ -12,7 +12,7 @@ class SelectMonth extends StatelessWidget {
 
   MonthOptions? monthStyle;
 
-  SelectMonth({required this.onHeaderChanged, this.monthStyle});
+  SelectMonth({super.key, required this.onHeaderChanged, this.monthStyle});
 
   late BoxDecoration selectedDecoration;
 
@@ -38,7 +38,7 @@ class SelectMonth extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
-              '${Translator.getTranslation('month_selector')}',
+              Translator.getTranslation('month_selector'),
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w500,
@@ -75,7 +75,7 @@ class SelectMonth extends StatelessWidget {
   List<TableRow> monthsWidgetMaker(context) {
     months = Translator.getFullMonthNames();
 
-    List<Widget> _buildRowCells(int rowIndex) {
+    List<Widget> buildRowCells(int rowIndex) {
       List<TableCell> widgets = [];
       for (var j = 0; j < 3; j++) {
         final int mMonth = (rowIndex * 3) + j + 1;
@@ -90,7 +90,7 @@ class SelectMonth extends StatelessWidget {
                   onHeaderChanged.call(mMonth);
                 }),
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   decoration: mMonth == currentMonth ? selectedDecoration : null,
                   child: Center(
                       child: FittedBox(
@@ -116,7 +116,7 @@ class SelectMonth extends StatelessWidget {
 
     List<TableRow> monthsWidget = [];
     for (var i = 0; i < 4; i++) {
-      monthsWidget.add(TableRow(children: _buildRowCells(i)));
+      monthsWidget.add(TableRow(children: buildRowCells(i)));
     }
 
     return monthsWidget;

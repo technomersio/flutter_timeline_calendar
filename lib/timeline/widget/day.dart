@@ -19,7 +19,7 @@ class Day extends StatelessWidget {
   bool isInBetweenWeekDate;
 
   Day(
-      {required this.day,
+      {super.key, required this.day,
       required this.weekDay,
       this.dayOptions,
       this.dayStyle,
@@ -28,8 +28,7 @@ class Day extends StatelessWidget {
       this.calendarOptions,
       this.isWeekStartDate = false,
       this.isWeekEndDate = false,
-      this.isInBetweenWeekDate = false})
-      : super() {
+      this.isInBetweenWeekDate = false}){
     dayOptions ??= DayOptions();
     dayStyle ??= const DayStyle();
     calendarOptions ??= CalendarOptions();
@@ -93,7 +92,7 @@ class Day extends StatelessWidget {
                     ? dayOptions!.selectedBackgroundColor.withOpacity(0.2)
                     : Colors.transparent),
             child: AnimatedContainer(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               curve: Curves.ease,
               padding: dayStyle!.compactMode
                   ? EdgeInsets.zero
